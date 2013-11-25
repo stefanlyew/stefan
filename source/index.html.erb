@@ -1,0 +1,21 @@
+<% content_for :header do %>
+  <%= header_helper 'images/1/chauvet_large.jpg', '/blog/about.html' %>
+<% end %>
+
+<div class='posts'>
+  <% page_articles.each_with_index do |article, i| %>
+    <article class='post-listing' id="post-#{post.id}">
+      <% link_to article do %>
+        <div class='thumbnail-container'>
+          <div class='thumbnail' style="background-image: url('<%= article.data["thumb"] %>');"></div>
+        </div>
+        <div class='brief'>
+          <h3><%= article.title %></h3>
+          <p><%= article.data["summary"] %></p>
+          <!-- use article.summary(250) if you have Nokogiri available to show just
+          the first 250 characters -->
+        </div>
+      <% end %>
+    </article>
+  <% end %>
+</div>
