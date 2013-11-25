@@ -7,7 +7,7 @@
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.permalink = "/:title.html"
-  # blog.sources = ":year-:month-:day-:title.html"
+  blog.sources = "blog/:year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
@@ -79,8 +79,8 @@ page "blog/*", :layout => :article_layout
    def header_helper(image_path, link='/')
       <<-eos
       <header class='global-header' style="background-image: url('#{image_path}');">
-        <h1 class='logo'>Rob McLarty</h1>
-        <a alt='About Rob McLarty' class='main-button' href='#{link}' id='main-button' title='About Rob McLarty'>
+        <h1 class='logo'>Stefan Lyew</h1>
+        <a alt='About Stefan Lyew' class='main-button' href='#{link}' id='main-button' title='About Stefan Lyew'>
         </a>
       </header>
       eos
@@ -103,7 +103,7 @@ configure :build do
   activate :cache_buster
   
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
   
   # Compress PNGs after build
   # First: gem install middleman-smusher
