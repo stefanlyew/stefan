@@ -75,7 +75,7 @@ page "blog/*", :layout => :article_layout
 
 # Methods defined in the helpers block are available in templates
  helpers do
-   def header_helper(image_path, link='/index.html')
+   def header_helper(image_path, link='/')
       <<-eos
       <header class='global-header' style="background-image: url('#{image_path}');">
         <h1 class='logo'>Stefan Lyew</h1>
