@@ -5,7 +5,7 @@
 <div class='posts'>
   <% page_articles.each_with_index do |article, i| %>
     <article class='post-listing' id="post-#{post.id}">
-      <% link_to article do %>
+      <% link_to article, relative: true do %>
         <div class='thumbnail-container'>
           <div class='thumbnail' style="background-image: url('<%= article.data["thumb"] %>');"></div>
         </div>
