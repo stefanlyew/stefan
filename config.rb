@@ -104,7 +104,7 @@ configure :build do
   activate :cache_buster
   activate :asset_hash
   set :relative_links, true
-  activate :imageoptim do |imageoptime|
+  activate :imageoptim do |imageoptim|
     imageoptim.pngcrush_options = false
   end
   # Use relative URLs
