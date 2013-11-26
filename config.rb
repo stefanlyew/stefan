@@ -115,3 +115,25 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+activate :imageoptim do |options|
+  # print out skipped images
+  options.verbose = false
+
+  # Setting these to true or nil will let options determine them (recommended)
+  options.nice = true
+  options.threads = true
+
+  # Image extensions to attempt to compress
+  options.image_extensions = %w(.png .jpg .gif)
+
+  # compressor worker options, individual optimisers can be disabled by passing
+  # false instead of a hash
+  options.pngcrush_options  = {:chunks => ['alla'], :fix => false, :brute => false}
+  options.pngout_options    = {:copy_chunks => false, :strategy => 0}
+  options.optipng_options   = {:level => 6, :interlace => false}
+  options.advpng_options    = {:level => 4}
+  options.jpegoptim_options = {:strip => ['all'], :max_quality => 100}
+  options.jpegtran_options  = {:copy_chunks => false, :progressive => true, :jpegrescan => true}
+  options.gifsicle_options  = {:interlace => false}
+end
