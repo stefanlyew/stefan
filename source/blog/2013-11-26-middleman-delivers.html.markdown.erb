@@ -1,0 +1,76 @@
+---
+title: Middleman Delivers the Good Stuff
+date: 2013-11-26 18:55 UTC
+thumb: "images/3/brothers_thumb.jpg"
+summary: Middleman allows me to greatly simplify my blogging workflow. At the same time it gives me the flexibility to maintain, customize and adapt the site if I need to make changes.
+---
+
+Middleman Delivers the Goods
+================================
+
+##[Middleman](http://middlemanapp.com/) allows me to greatly simplify my blogging workflow. It gives me the flexibility to maintain, customize and adapt the site if I need to make changes. It also gives me a big performance boost from using static HTML.  But most importantly I can focus completely on writing content.  If your blog will have just a single author who knows how to code (with exposure to Rails) Middleman will be ideal for you.
+
+###Writing Workflow
+
+By using the extensions [middleman-blog](http://middlemanapp.com/blogging) and [middleman-gh-pages](https://github.com/neo/middleman-gh-pages) publishing an article is dead simple.
+
+I create a new article with a single command
+
+    bundle exec middleman article "Launching my blog"
+
+This puts a file in the appropriate location with a YAML “frontmatter” to hold any data I might need.
+
+    ---
+    title: Middleman Delivers the Good Stuff
+    date: 2013-11-26 18:55 UTC
+    thumb: "images/2/logcabin_thumb.jpg"
+    tags: middleman, writing
+    ---
+
+From there I can focus completely on writing the content of the article.  [Markdown](http://daringfireball.net/projects/markdown/basics) let’s me write the article content in a plain text format.
+
+Writing posts in Markdown is a joy: everything is much easier to read and write without worrying about formatting.  Later it gets converted automatically to HTML syntax.
+
+Finally when I call:
+
+    rake publish
+
+the article will build, publish and deploy to production on the web.  That’s it.  No clumsy admin screens or WSYSIWYG editors.  Fewer moving parts.
+
+Iron Chef Morimoto wrote that "Dashi (Japanese fish stock) takes 10 minutes of active time to create and mostly requires just two ingredients:  cured bonito flakes and kelp.  But what seems simple is in fact subtle and complex."  Using Middleman to build static sites is a similar experience.  While you will find it to be straighforward and simple, it still requires a touch of finesse under the hood.
+
+###Why use a Static Site Generator?
+
+For simple sites that don’t require a database: less is more.
+
+* Speed:  Static HTML is very fast because the server's only concern is serving the HTML.
+
+* Security:  You can’t hack a plain HTML page
+
+* Scale: Static HTML will handle stress under load from traffic if your article finds its way to the front page of Hacker News
+
+
+###Why choose Middleman over Jekyll?
+
+The core feature of this particular site is blogging.  But Middleman supports static sites of all types.  Jekyll is structured around the idea of “posts” which is quite limiting if you want to build different types of applications.
+
+More than that though, Middleman sticks to familiar Rails conventions.  You won’t have to learn a new workflow just to generate static sites.  And you can enjoy the benefits to programmer productivity of using a modern tool set.  Rails essentially has the core functions of a static site generator already built in to it already.  But through Middleman you cut out all of the overhead that comes with the Rails framework in order to build traditional dynamic sites.  Middleman is more powerful than Jekyll, but also covers more familiar territory.
+
+Basically, you get all the good parts that come from the front-end side of Rails.  Common layouts, reusable partials and nesting templating help to promote better code organization while cutting down on the amount of boilerplate and duplication in the code you write.  You can use the asset pipeline and turbolinks too.  As well as CoffeScript and Sass!
+
+###Some setup issues I ran into
+
+I initially had some annoyances getting links to pages and assets working properly from development to deployment. Make sure you brush up on your relative and absolute paths for links.
+
+I set the following in config.rb:
+
+    activate :relative_assets
+
+    # Build-specific configuration
+    configure :build do
+      set :relative_links, true
+    end
+
+<% content_for :header do %>
+  <%= header_helper '../images/3/brothers_large.jpg' %>
+<% end %>

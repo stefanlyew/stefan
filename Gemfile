@@ -11,4 +11,3 @@ gem "jquery-middleman"
 gem "builder", "~> 3.0"
 
 gem "middleman-favicon-maker"
-gem "turbolinks", require: false
