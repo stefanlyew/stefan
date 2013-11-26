@@ -12,4 +12,3 @@ gem "builder", "~> 3.0"
 
 gem "middleman-favicon-maker"
 
-gem "middleman-imageoptim"

@@ -104,10 +104,7 @@ configure :build do
   activate :cache_buster
   activate :asset_hash
   set :relative_links, true
-  activate :imageoptim do |imageoptim|
-    imageoptim.pngcrush_options = false
-    imageoptim.pngout_options = false
-  end
+
   # Use relative URLs
 
   # Compress PNGs after build
@@ -118,3 +115,4 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
