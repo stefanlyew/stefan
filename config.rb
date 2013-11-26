@@ -106,6 +106,7 @@ configure :build do
   set :relative_links, true
   activate :imageoptim do |imageoptim|
     imageoptim.pngcrush_options = false
+    imageoptim.pngout_options = false
   end
   # Use relative URLs
 
