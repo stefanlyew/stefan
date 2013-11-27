@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/blog/a-moveable-feast.html"/>
     <id>http://blog.url.com/blog/a-moveable-feast.html</id>
     <published>2013-11-27T01:56:00Z</published>
-    <updated>2013-11-27T00:25:49-05:00</updated>
+    <updated>2013-11-27T00:38:37-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -25,15 +25,18 @@
 &lt;p&gt;I don’t like the original cover because I think that the deco styles and fonts are cheesy and overstated. I think Hemingway was more plain and simple.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="images/4/originalcover-a292bde5.jpg" /&gt;
+&lt;br /&gt;
 I wrote on a fancy paper napkin to get a true scribbled look.  I gathered assets from the web and put them together in photoshop.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="images/4/assets-5f0b0e56.jpg" /&gt;
 The main tricks I learned during this project were how to play with realistic cast shadows for objects.  Here’s how to do it:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="images/4/screenshot-7d29072f.png" /&gt;
-    Step 1: Make a selection containing only the object you want using the magic wand or pen tool.  Put it on its own layer. You can have photoshop automatically clean up the edges of your selection by going to Layer&amp;gt;Matting.&lt;/p&gt;
+&lt;br /&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Step 2:  Right click on the layer of the object you want to shadow and duplicate it.
+&lt;pre&gt;&lt;code&gt;Step 1: Make a selection containing only the object you want using the magic wand or pen tool.  Put it on its own layer. You can have photoshop automatically clean up the edges of your selection by going to Layer&amp;gt;Matting.
+
+Step 2:  Right click on the layer of the object you want to shadow and duplicate it.
 
 Step 3:  Set your foreground color to black and black the object out by Cmd-Shift-Del. Make it shadowy by hitting it with Filter&amp;gt;Blur&amp;gt;Gaussian blur between 3-5.
 
