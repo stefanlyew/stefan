@@ -173,7 +173,7 @@ end
     <link rel="alternate" href="http://blog.url.com/blog/about.html"/>
     <id>http://blog.url.com/blog/about.html</id>
     <published>1990-09-18T00:00:00Z</published>
-    <updated>2013-11-26T17:01:42-05:00</updated>
+    <updated>2013-11-27T00:45:50-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -189,7 +189,7 @@ end
 
 &lt;h2 id="collaborate-with-me"&gt;Collaborate With Me&lt;/h2&gt;
 
-&lt;p&gt;I have never met another developer that I haven’t learned something from.  In fact I’ve never met another person I haven’t learned something from.&lt;/p&gt;
+&lt;p&gt;I have never met another developer that I haven’t learned something from.  In fact, I’ve never met another person I haven’t learned something from.&lt;/p&gt;
 
 &lt;p&gt;I am available to pair program, either physically in NYC or remotely via Skype, TeamViewer and Tmux.  I love getting feedback, positive or negative and refining new approaches and techniques.&lt;/p&gt;
 
