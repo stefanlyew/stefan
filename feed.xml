@@ -5,16 +5,62 @@
   <id>http://blog.url.com/blog/</id>
   <link href="http://blog.url.com/blog/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-11-26T18:55:00Z</updated>
+  <updated>2013-11-27T01:56:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>A Moveable Feast</title>
+    <link rel="alternate" href="http://blog.url.com/blog/a-moveable-feast.html"/>
+    <id>http://blog.url.com/blog/a-moveable-feast.html</id>
+    <published>2013-11-27T01:56:00Z</published>
+    <updated>2013-11-26T23:55:26-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h1 id="a-moveable-feast"&gt;A Moveable Feast&lt;/h1&gt;
+
+&lt;h2 id="to-sharpen-my-design-skills-i-redesigned-the-cover-of-my-favorite-book"&gt;To sharpen my design skills I redesigned the cover of my favorite book.&lt;/h2&gt;
+
+&lt;p&gt;I don’t like the original cover because I think that the deco styles and fonts are cheesy and overstated. I think Hemingway was more plain and simple.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Alt text" src="images/4/originalcover-2941d244.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wrote on a fancy paper napkin to get a true scribbled look.  I gathered assets from the web and put them together in photoshop.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Alt text" src="images/4/assets-07d2a99c.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The main tricks I learned during this project were how to play with realistic cast shadows for objects.  Here’s how to do it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Alt text" src="images/4/screenshot-c6c556de.png" /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Step 1: Make a selection containing only the object you want using the magic wand or pen tool.  Put it on its own layer. You can have photoshop automatically clean up the edges of your selection by going to Layer&amp;gt;Matting.
+
+Step 2:  Right click on the layer of the object you want to shadow and duplicate it.
+
+Step 3:  Set your foreground color to black and black the object out by Cmd-Shift-Del. Make it shadowy by hitting it with Filter&amp;gt;Blur&amp;gt;Gaussian blur between 3-5.
+
+Step 4:  Distort the shadow shape into the perspective you want by hitting Cmd+T then right clicking the object and selecting Distort.  You can skew the image to make it look like it is being cast.
+
+Step 5:  Reduce the opacity of the layer to 30-50%
+
+Bonus: You might want to duplicate the shadow layer and add a layer mask.  You can then drag a gradient so the shadow appears softer as it gets further away.  Set both shadow layers to multiply mode.  Continue to play around, and add more guassian blur until you get the result you want.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here’s how the finished project came out…&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Alt text" src="images/4/moveable_feast-31c10fd2.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;“If you are lucky enough to have lived in Paris as a young man, then wherever you go for the rest of your life, it stays with you, for Paris is a moveable feast.”&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Middleman Delivers the Good Stuff</title>
     <link rel="alternate" href="http://blog.url.com/blog/middleman-delivers.html"/>
     <id>http://blog.url.com/blog/middleman-delivers.html</id>
     <published>2013-11-26T18:55:00Z</published>
-    <updated>2013-11-26T15:03:44-05:00</updated>
+    <updated>2013-11-26T23:22:13-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>

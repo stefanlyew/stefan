@@ -68,6 +68,14 @@
     <loc>http://youdomain.com/< %=p.destination_path.gsub('/index.html','')%></loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>http://youdomain.com/< %=p.destination_path.gsub('/index.html','')%></loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://youdomain.com/< %=p.destination_path.gsub('/index.html','')%></loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
 
         <footer class='global-footer'>
