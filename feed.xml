@@ -5,16 +5,114 @@
   <id>http://blog.url.com/blog/</id>
   <link href="http://blog.url.com/blog/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-11-27T01:56:00Z</updated>
+  <updated>2013-12-03T07:18:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Resources to Level-up to Intermediate Rails Developer</title>
+    <link rel="alternate" href="http://blog.url.com/blog/intermediate-ruby-resources.html"/>
+    <id>http://blog.url.com/blog/intermediate-ruby-resources.html</id>
+    <published>2013-12-03T07:18:00Z</published>
+    <updated>2013-12-03T03:22:52-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h1 id="resources-to-level-up-to-intermediate-rails-developer"&gt;Resources to Level-up to Intermediate Rails Developer&lt;/h1&gt;
+
+&lt;h2 id="so-youve-read-the-books-done-the-tutorials-and-written-your-own-rails-applications--whats-next--use-these-resources-to-help-you-along-the-way-and-to-further-immerse-yourself-in-the-craft-of-ruby-web-development"&gt;So you’ve read the books, done the tutorials and written your own Rails applications.  What’s next?  Use these Resources to help you along the way, and to further immerse yourself in the craft of ruby web development.&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;“I hear and I forget. I see and I remember. I do and I understand.”
+–Confucius&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://everydayrails.com/2010/07/05/intermediate-rails-steps.html"&gt;First: Read this post by Aaron Sumner&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id="screencasts"&gt;Screencasts&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://pluralsight.com/training/Courses"&gt;Pluralsight&lt;/a&gt; (PeepCode/TekPub).  PluralSight acquired PeepCode and TekPub which produce excellent premium screencasts on a huge variety of modern web development topics.  The upside is that getting unlimited access to both for $29 a month is a huge bargain, along with a huge library of other courses.  The downsides are that now you can’t download the videos and the streaming video buffering speed is kind of slow.  At the end of this article I’ll show you how college students can get a free 3-month subscription.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://railscasts.com/"&gt;Railscasts&lt;/a&gt; by Ryan Bates.  Railscasts give you a broad overview of the tools in the Rails universe.  Each screencast gives you a brief introduction to a specific concept or gem and how you could use it. It’s kind of uncanny how often you’ll be stuck working on a problem and find that there is a Railscasts on the exact topic. Beginner-friendly but no substitute for getting your hands dirty.  A pro subscription costs $9 a month.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.rubytapas.com/"&gt;RubyTapas&lt;/a&gt; by Avdi Grimm.  Intermediate to Advanced level Ruby-Fu in digestable chunks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.destroyallsoftware.com/screencasts"&gt;Destroy All Software&lt;/a&gt; by Gary Bernhardt.  Here you watch a master programmer at work as he focuses in on software design principles, test driven development and advanced development techniques.  Try not to be intimidated, he works really fast so pause and rewind when you need to.&lt;/p&gt;
+
+&lt;h3 id="blogsnewsletters"&gt;Blogs/Newsletters&lt;/h3&gt;
+
+&lt;p&gt;You should always be informed about news, tips, tricks and new features. Read articles about Ruby on Rails and play with the code samples you’ve read from these articles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://rubyreflector.com/"&gt;The Ruby Reflector&lt;/a&gt;  Aggregates 709 blogs from the Ruby community in a social news format. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://rubyweekly.com/"&gt;The Ruby Weekly&lt;/a&gt; A free curated weekly roundup of ruby articles&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://robots.thoughtbot.com/"&gt;Giant Robots&lt;/a&gt; The blog by web development firm thoughtbot. They have contributed immensely to the Ruby on Rails and web development community, with tools like FactoryGirl, Shoulda and Paperclip.&lt;/p&gt;
+
+&lt;h3 id="code-quizzes"&gt;Code Quizzes&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://rubyquiz.com/]"&gt;http://rubyquiz.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id="books"&gt;Books&lt;/h3&gt;
+
+&lt;p&gt;Books are great for deepening your understanding of things like the Ruby Object Model.  Like Confucius say, the most effective way to spend your time will be doing programming, writing code, and coding along while seeing how others write their code.  But don’t be afraid to hit the books in your spare time either.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://majesticseacreature.com/rbp-book/pdfs/rbp_1-0.pdf"&gt;Ruby Best Practices&lt;/a&gt; by Gregory Brown (Free Download)&lt;/p&gt;
+
+&lt;p&gt;Eloquent Ruby by Russ Olsen&lt;/p&gt;
+
+&lt;p&gt;The Rails 4 Way by Obie Fernandez&lt;/p&gt;
+
+&lt;p&gt;Practical Object Oriented Design in Ruby by Sandi Metz&lt;/p&gt;
+
+&lt;p&gt;Rails Antipatterns by Chad Pytel (CEO of thoughbot)&lt;/p&gt;
+
+&lt;p&gt;Crafting Rails Applications by Jose Valim (major rails contributor)&lt;/p&gt;
+
+&lt;p&gt;The Elements of Style by Strunk and White&lt;/p&gt;
+
+&lt;p&gt;Mastery by George Leonard&lt;/p&gt;
+
+&lt;h3 id="free-3-month-subscription-to-pluralsight-for-college-students-through-microsoft"&gt;Free 3-Month Subscription To PluralSight for College Students Through Microsoft&lt;/h3&gt;
+
+&lt;p&gt;Kind of a convoluted process, but worth it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href="https://www.dreamspark.com/Product/Product.aspx?productid=21"&gt;Visit Dreamspark and go to Products Pluralsight&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click on Get Verified&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create an Account with a Valid .edu email address&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Verify your school email address &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now you should go back to the Pluralsight Products page, and be signed in with a verified student account&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click on get key&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open a new tab and visit this link to PluralSight’s Dreamspark offer.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href="https://pluralsight.com/training/offers?cc=Dreamspark"&gt;Paste the key that you got from DreamSpark and register a new account.&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enjoy your free 3 month learning spree.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+  </entry>
   <entry>
     <title>A Moveable Feast</title>
     <link rel="alternate" href="http://blog.url.com/blog/a-moveable-feast.html"/>
     <id>http://blog.url.com/blog/a-moveable-feast.html</id>
     <published>2013-11-27T01:56:00Z</published>
-    <updated>2013-11-27T00:38:37-05:00</updated>
+    <updated>2013-12-02T21:50:22-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
