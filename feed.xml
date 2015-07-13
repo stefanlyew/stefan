@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/blog/fuzzy-jquery.html"/>
     <id>http://blog.url.com/blog/fuzzy-jquery.html</id>
     <published>2014-05-23T07:18:00Z</published>
-    <updated>2015-07-13T09:30:03-05:00</updated>
+    <updated>2015-07-13T10:03:19-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -24,7 +24,7 @@
 
 &lt;p&gt;I’m working on a web scraper that grabs information from product pages on popular retail sites. Typically, these sites use the same attribute names (like colorChoice or sizeChoice) for every product. This means one jQuery selector can pull all the data I need for every product on the site. Easy enough, right?&lt;/p&gt;
 
-&lt;p&gt;So, a few days ago, I wired in to work on this web scraper with my headphones blaring some filthy dubstep. I loaded a JCrew product page, popped open the inspector and started searching. As I dug deeper, I noticed something weird…&lt;/p&gt;
+&lt;p&gt;So, a few days ago, I loaded a JCrew product page, popped open the inspector and started searching. As I dug deeper, I noticed something weird…&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;All the id attributes on the page had different names.&lt;/strong&gt;&lt;/p&gt;
 
@@ -35,7 +35,7 @@
 
 &lt;p&gt;I wanted the web scraper to extract the colorChoice for each product on the site, but the unique id names would require thousands of different jQuery selectors. How the heck am I supposed to select by id if the attributes keep changing all the time?!&lt;/p&gt;
 
-&lt;p&gt;After banging my head against the wall for a few hours, I started researching. And researching. Finally, I learned something cool – &lt;strong&gt;jQuery can do fuzzy matches against partial, inexact and incomplete attributes.&lt;/strong&gt; Sanity saved!&lt;/p&gt;
+&lt;p&gt;After grappling with the problem for a few hours, I started researching. And researching. Finally, I learned something cool – &lt;strong&gt;jQuery can do fuzzy matches against partial, inexact and incomplete attributes.&lt;/strong&gt; Sanity saved!&lt;/p&gt;
 
 &lt;p&gt;jQuery can do this with a few built-in regex-style operations. They look like this:&lt;/p&gt;
 
