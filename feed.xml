@@ -5,16 +5,72 @@
   <id>http://blog.url.com/blog/</id>
   <link href="http://blog.url.com/blog/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-03T07:18:00Z</updated>
+  <updated>2014-05-23T07:18:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Fuzzy jQuery</title>
+    <link rel="alternate" href="http://blog.url.com/blog/fuzzy-jquery.html"/>
+    <id>http://blog.url.com/blog/fuzzy-jquery.html</id>
+    <published>2014-05-23T07:18:00Z</published>
+    <updated>2015-07-13T09:11:10-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h1 id="fuzzy-jquery"&gt;Fuzzy jQuery&lt;/h1&gt;
+
+&lt;h2 id="using-jquerys-built-in-regex-style-operations-for-fuzzy-matching"&gt;Using jQuery’s built-in regex style operations for fuzzy matching.&lt;/h2&gt;
+
+&lt;p&gt;I’m working on a web scraper that grabs information from product pages on popular retail sites. Typically, these sites use the same attribute names (like colorChoice or sizeChoice) for every product. This means one jQuery selector can pull all the data I need for every product on the site. Easy enough, right?&lt;/p&gt;
+
+&lt;p&gt;So, a few days ago, I wired in to work on this web scraper with my headphones blaring some filthy dubstep. I loaded a JCrew product page, popped open the inspector and started searching. As I dug deeper, I noticed something weird…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;All the id attributes on the page had different names.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I checked other JCrew pages. The attributes were unique for EVERY. SINGLE. PRODUCT. on the site! It looked like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="images/6/product-info-934714a4.png" /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted the web scraper to extract the colorChoice for each product on the site, but the unique id names would require thousands of different jQuery selectors. How the heck am I supposed to select by id if the attributes keep changing all the time?!&lt;/p&gt;
+
+&lt;p&gt;After banging my head against the wall for a few hours, I started researching. And researching. Finally, I learned something cool – &lt;strong&gt;jQuery can do fuzzy matches against partial, inexact and incomplete attributes.&lt;/strong&gt; Sanity saved!&lt;/p&gt;
+
+&lt;p&gt;jQuery can do this with a few built-in regex-style operations. They look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;name^=”value”&lt;/strong&gt; (Attribute starts with a “value”)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;name$=”value”&lt;/strong&gt; (Attribute ends with a “value”)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;name*=”value”&lt;/strong&gt; (Attribute contains a “value”)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;name!=”value”&lt;/strong&gt; (Attribute does not equal a “value”)&lt;/p&gt;
+
+&lt;p&gt;Because ids and classes are simple attributes, you can apply a regex attribute filter on the HTML above to get something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$('span[id^=colorChoice_]')
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which will return the attribute starting with colorChoice, like this…&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;span id="​"colorChoice_258740_432121""&amp;gt;​Classic Navy Blue​&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will match every time for different products across the site, even when you don’t know the exact id name. Using fuzzy jQuery matching is a simple but powerful solution that will save you a ton of headaches. I know it did for me.&lt;/p&gt;
+
+&lt;p&gt;Keep in mind you’ll want to be as specific as possible. Otherwise, your jQuery will evaluate every div or span with a matching attribute, which I don’t recommend because your performance would suck.&lt;/p&gt;
+
+&lt;p&gt;Now that I have this trick in my jQuery toolbelt, I find myself reaching for it all the time – especially when I write scripts to evaluate data on web pages. I hope it helps you too!&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Resources to Level-up to Intermediate Rails Developer</title>
     <link rel="alternate" href="http://blog.url.com/blog/intermediate-ruby-resources.html"/>
     <id>http://blog.url.com/blog/intermediate-ruby-resources.html</id>
     <published>2013-12-03T07:18:00Z</published>
-    <updated>2013-12-03T03:39:33-05:00</updated>
+    <updated>2013-12-03T02:39:33-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -112,7 +168,7 @@
     <link rel="alternate" href="http://blog.url.com/blog/a-moveable-feast.html"/>
     <id>http://blog.url.com/blog/a-moveable-feast.html</id>
     <published>2013-11-27T01:56:00Z</published>
-    <updated>2013-12-02T21:50:22-05:00</updated>
+    <updated>2013-12-02T20:50:22-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -157,7 +213,7 @@ Bonus: You might want to duplicate the shadow layer and add a layer mask.  You c
     <link rel="alternate" href="http://blog.url.com/blog/middleman-delivers.html"/>
     <id>http://blog.url.com/blog/middleman-delivers.html</id>
     <published>2013-11-26T18:55:00Z</published>
-    <updated>2013-11-26T23:22:13-05:00</updated>
+    <updated>2013-11-26T22:22:13-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -238,31 +294,68 @@ end
 </content>
   </entry>
   <entry>
-    <title>Coding Tips From Abe Lincoln</title>
+    <title>How to fix Common Performance and Rendering Issues with Momentum Scrolling In Hybrid iOS Applications</title>
     <link rel="alternate" href="http://blog.url.com/blog/abe-lincoln.html"/>
     <id>http://blog.url.com/blog/abe-lincoln.html</id>
     <published>2013-11-18T00:00:00Z</published>
-    <updated>2013-11-26T10:16:41-05:00</updated>
+    <updated>2015-07-13T09:21:11-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;h1 id="coding-tips-from-abe-lincoln"&gt;Coding Tips From Abe Lincoln&lt;/h1&gt;
 
-&lt;h2 id="i-decided-to-try-something-zany-in-honor-of-the-150th-anniversary-of-the-gettysburg-address--this-is-the-gettysburg-addresshttpwwwhuffingtonpostcomhuff-wires20131119us--gettysburg-address-text-expressed-as-roughly-ruby-like-pseudo-code"&gt;I decided to try something zany in honor of the 150th Anniversary of the Gettysburg Address.  This is the &lt;a href="http://www.huffingtonpost.com/huff-wires/20131119/us--gettysburg-address-text/"&gt;Gettysburg Address&lt;/a&gt; expressed as roughly Ruby-like pseudo-code.&lt;/h2&gt;
+&lt;p&gt;I recently built an indexed table list view with HTML/CSS and JavaScript for a hybrid PhoneGap/Cordova application. I wanted my scrolling list to have a user experience close to the iOS Contacts application.&lt;/p&gt;
 
-&lt;p&gt;Matz has said that we should write code the same way we would compose an essay. Programmers need to see themselves as proud authors. Our code should communicate to the reader.  Honest Abe knew that clear reasoning and persuasive style went hand in hand to crafting a good finished work…&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/2/iphone-contacts-9bd9ec67.png" /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id="problems"&gt;Problems&lt;/h2&gt;
 
-&lt;script src="https://gist.github.com/stefanlyew/7595557.js"&gt;&lt;/script&gt;
+&lt;p&gt;I ran into several problems with Apple’s implementation of -webkit-overflow-scrolling: touch.&lt;/p&gt;
 
-&lt;p&gt;Abe Lincoln was a badass at using &lt;a href="http://www.theatlantic.com/magazine/archive/2012/02/the-words-that-remade-america/308801/"&gt;the logical structure of language&lt;/a&gt;. Taking apart the speech in this way shows some of the underlying patterns of thought that organize the speech and make it so compact and coherent.  Looking at our code persuasively can help us become more stylistically comfortable at crafting code that is easy for a reader to follow.&lt;/p&gt;
+&lt;p&gt;1). White Flicker
+After adding the CSS property -webkit-overflow-scrolling: touch in order to get smooth momentum scrolling a strange white flicker started occurring. When scrolling fast, elements of the list would seem to flicker and disappear.&lt;/p&gt;
 
-&lt;p&gt;Lincoln’s tight logic and eloquent phrasing of sentences pack quite a wallop.  Look closely and it becomes clear that the Gettysburg Address is structured as a careful step-by-step solution to a hard problem.  The problem he set out to solve was uniting the nation to end the Civil War.  His 272-word speech explains his vision of a solution.  Every sentence packs a dual punch. It maximizes the ability of the reader to follow his train of thought. It also moves forward the logic of what he is trying to accomplish.&lt;/p&gt;
+&lt;p&gt;2). Scroll Events
+The other main issue that I ran into with -webkit-overflow-scrolling: touch is that it does not continuously fire scroll events like the standard CSS scroll properties. It only fires events on scroll start and scroll end. This made it impossible to implement sticky section headers like you see in the iOS Contacts List or other scrolling list view apps like Instagram.&lt;/p&gt;
 
-&lt;p&gt;Lincoln was a great writer because he tirelessly refactored line by line and edited draft after draft.  In his spare time he enjoyed studying grammar and syntax to learn the most effective parts of the language.&lt;/p&gt;
+&lt;p&gt;3). scrollTo() Responds Slowly.&lt;/p&gt;
 
-&lt;p&gt;At its best, clean code should follow a similar workflow.  I don’t know whether &lt;a href="http://www.codinghorror.com/blog/2008/02/code-isnt-beautiful.html"&gt;code can be beautiful or not&lt;/a&gt;: but it most certainly has the power to get the author’s point across.  This is a power that we as programmers too often neglect. Most of the time we are willing to accept a first draft because “it runs”.  But great programmers write code that maximizes the chance other humans will be able to follow the context.  So the next time you are in a creative slump, clear your mind and picture yourself coding up a plan to save the Union.&lt;/p&gt;
+&lt;h2 id="fixing-the-white-flicker"&gt;Fixing the White Flicker&lt;/h2&gt;
+&lt;p&gt;On a scrolling list with -webkit-overflow-scrolling: touch when child elements have position:relative and are offscreen you will experience rendering issues due to a buggy implementation by Apple after iOS 5. If you search google or stack overflow for white screen flicker while scrolling you will see that this a common issue that has been plaguing users. Fortunately iOS 8 seems to have fixed the issue. If your device target is below iOS 8 then you might still need to implement the following fix:&lt;/p&gt;
+
+&lt;p&gt;-webkit-overflow-scrolling: touch works by inconsistently promoting elements to their own hardware accelerated layers.&lt;/p&gt;
+
+&lt;p&gt;The fix I found is to force all elements inside the scrolling area to be hardware accelerated: this prevents inconsistencies.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.scrolling-container &amp;gt; * {
+    -webkit-transform: translate3d(0,0,0);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Applying the property -webkit-transform: translate3d(0,0,0); is a technique to force some devices to use hardware acceleration on the transitions for those elements. &lt;a href="http://www.smashingmagazine.com/2012/06/21/play-with-hardware-accelerated-css"&gt;Smashing Magazine&lt;/a&gt; explains:&lt;/p&gt;
+
+&lt;p&gt;Native applications can access the device’s graphical processing unit (GPU) to make pixels fly. Web applications, on the other hand, run in the context of the browser, which lets the software do most (if not all) of the rendering, resulting in less horsepower for transitions. But the Web has been catching up, and most browser vendors now provide graphical hardware acceleration by means of particular CSS rules.&lt;/p&gt;
+
+&lt;p&gt;Using the GPU to render element transitions is memory intensive, so use this as sparingly as possible. We only used this hack because there was no other workaround at the time.&lt;/p&gt;
+
+&lt;h2 id="scroll-events"&gt;Scroll Events&lt;/h2&gt;
+
+&lt;p&gt;Before iOS 8, Apple’s mobile browser did not continuously fire scroll events: unlike standard desktop browsers, which do. This makes it impossible to execute code while the users scroll and get responsive components like parallax effects or sticky headers.&lt;/p&gt;
+
+&lt;p&gt;The good news is the issue has finally been fixed in iOS 8 with the new WKWebView replacing the buggy UIWebView. The bad news is that WKWebView still has bugs which prevent Cordova developers from using it. Thankfully, Telerik has released a polyfill that patches WKWebView and provides a drop in replacement allowing you to use it as a plugin.&lt;/p&gt;
+
+&lt;p&gt;Adding WKWebView to my project not only fixed the white flicker hardware issues described above, but also provided me with continuous scroll events to develop on. And wait, there’s more! WKWebView also dramatically increases render performance of scrolling elements!&lt;/p&gt;
+
+&lt;p&gt;Check out &lt;a href="https://github.com/Telerik-Verified-Plugins/WKWebView"&gt;Telerik’s plugin&lt;/a&gt; and a &lt;a href="http://developer.telerik.com/featured/scroll-event-change-ios-8-big-deal"&gt;blog article explaining the situation with Scroll Events&lt;/a&gt; more in depth.&lt;/p&gt;
+
+&lt;h2 id="scrollto"&gt;scrollTo()&lt;/h2&gt;
+
+&lt;p&gt;I wanted to build something similar to the alphabetic index controls you see on the right hand side of the iOS Contacts list app. The problem was that when using the -webkit-overflow-scrolling: touch the scrollable container would not scroll instantly in response to jQuery scrollTop() or the window scrollTo() methods.&lt;/p&gt;
+
+&lt;p&gt;To get the scroll performance I needed I used Velocity.JS which is an accelerated JavaScript animation library that is much faster than jQuery in many respects. I could call Velocity’s “scroll” method on a given element with duration 0 and the scrollable container specified would instantly jump to the top of the selected element.&lt;/p&gt;
+
+&lt;p&gt;Velocity.JS and Telerik’s WKWebView plugin are excellent examples of how web technologies continue to advance and compete with native applications. Velocity.JS and WKWebView gave me the mobile browser performance I needed to smoothly render a great experience for my users.&lt;/p&gt;
 
 </content>
   </entry>
@@ -271,7 +364,7 @@ end
     <link rel="alternate" href="http://blog.url.com/blog/about.html"/>
     <id>http://blog.url.com/blog/about.html</id>
     <published>1990-09-18T00:00:00Z</published>
-    <updated>2013-11-27T00:45:50-05:00</updated>
+    <updated>2013-11-26T23:45:50-06:00</updated>
     <author>
       <name>Article Author</name>
     </author>

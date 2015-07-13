@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content="The blog of Stefan Lyew. Thoughts on Ruby Programming, Digital Creativity, and Music." name='description'>
+    <meta content='Stefan Lyew' name='application-name'>
+    <meta content='Stefan Lyew' name='author'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content='IE-edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='no' http-equiv='MSThemeCompatible'>
+
+    <title>Stefan Lyew</title>
+    <link href="../stylesheets/application-adf58939.css" media="all" data-turbolinks-track="true" rel="stylesheet" type="text/css" />
+    <script src="../javascripts/application-89a6b84f.js" data-turbolinks-track="true" type="text/javascript"></script>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
+  </head>
+  <body>
+            <header class='global-header' style="background-image: url('../images/6/logcabin_large-12ee6a35.jpg');">
+        <h1 class='logo'>Stefan Lyew</h1>
+        <a alt='About Stefan Lyew' class='main-button' href='/' id='main-button' title='About Stefan Lyew'>
+        </a>
+      </header>
+
+
+    <div class="main">
+          <article class="post">
+    <h1 id="fuzzy-jquery">Fuzzy jQuery</h1>
+
+<h2 id="using-jquerys-built-in-regex-style-operations-for-fuzzy-matching">Using jQuery’s built-in regex style operations for fuzzy matching.</h2>
+
+<p>I’m working on a web scraper that grabs information from product pages on popular retail sites. Typically, these sites use the same attribute names (like colorChoice or sizeChoice) for every product. This means one jQuery selector can pull all the data I need for every product on the site. Easy enough, right?</p>
+
+<p>So, a few days ago, I wired in to work on this web scraper with my headphones blaring some filthy dubstep. I loaded a JCrew product page, popped open the inspector and started searching. As I dug deeper, I noticed something weird…</p>
+
+<p><strong>All the id attributes on the page had different names.</strong></p>
+
+<p>I checked other JCrew pages. The attributes were unique for EVERY. SINGLE. PRODUCT. on the site! It looked like this:</p>
+
+<p><img src="../images/6/product-info-934714a4.png" />
+<br /></p>
+
+<p>I wanted the web scraper to extract the colorChoice for each product on the site, but the unique id names would require thousands of different jQuery selectors. How the heck am I supposed to select by id if the attributes keep changing all the time?!</p>
+
+<p>After banging my head against the wall for a few hours, I started researching. And researching. Finally, I learned something cool – <strong>jQuery can do fuzzy matches against partial, inexact and incomplete attributes.</strong> Sanity saved!</p>
+
+<p>jQuery can do this with a few built-in regex-style operations. They look like this:</p>
+
+<p><strong>name^=”value”</strong> (Attribute starts with a “value”)</p>
+
+<p><strong>name$=”value”</strong> (Attribute ends with a “value”)</p>
+
+<p><strong>name*=”value”</strong> (Attribute contains a “value”)</p>
+
+<p><strong>name!=”value”</strong> (Attribute does not equal a “value”)</p>
+
+<p>Because ids and classes are simple attributes, you can apply a regex attribute filter on the HTML above to get something like this:</p>
+
+<pre><code>$('span[id^=colorChoice_]')
+</code></pre>
+
+<p>which will return the attribute starting with colorChoice, like this…</p>
+
+<pre><code>&lt;span id="​"colorChoice_258740_432121""&gt;​Classic Navy Blue​&lt;/span&gt;
+</code></pre>
+
+<p>This will match every time for different products across the site, even when you don’t know the exact id name. Using fuzzy jQuery matching is a simple but powerful solution that will save you a ton of headaches. I know it did for me.</p>
+
+<p>Keep in mind you’ll want to be as specific as possible. Otherwise, your jQuery will evaluate every div or span with a matching attribute, which I don’t recommend because your performance would suck.</p>
+
+<p>Now that I have this trick in my jQuery toolbelt, I find myself reaching for it all the time – especially when I write scripts to evaluate data on web pages. I hope it helps you too!</p>
+
+
+  </article>
+
+        <footer class='global-footer'>
+          &#9825; 2015 by <strong>Stefan Lyew</strong>. Copying is an act of love. Please copy. Front-end by Rob Mclarty.
+          <br>
+          <br>
+          <a class="icon github button small" href="http://github.com/stefanlyew" style="margin-right: 10px;">Github</a>
+        </footer>
+    </div>
+  </body>
+</html>
