@@ -298,7 +298,7 @@ end
     <link rel="alternate" href="http://blog.url.com/blog/abe-lincoln.html"/>
     <id>http://blog.url.com/blog/abe-lincoln.html</id>
     <published>2013-11-18T00:00:00Z</published>
-    <updated>2015-07-13T09:21:11-05:00</updated>
+    <updated>2015-07-13T09:35:48-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -309,22 +309,22 @@ end
 &lt;p&gt;&lt;img src="images/2/iphone-contacts-9bd9ec67.png" /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id="problems"&gt;Problems&lt;/h2&gt;
+&lt;h3 id="problems"&gt;Problems&lt;/h3&gt;
 
-&lt;p&gt;I ran into several problems with Apple’s implementation of -webkit-overflow-scrolling: touch.&lt;/p&gt;
+&lt;p&gt;I ran into several problems with Apple’s implementation of ‘-webkit-overflow-scrolling: touch’.&lt;/p&gt;
 
 &lt;p&gt;1). White Flicker
-After adding the CSS property -webkit-overflow-scrolling: touch in order to get smooth momentum scrolling a strange white flicker started occurring. When scrolling fast, elements of the list would seem to flicker and disappear.&lt;/p&gt;
+After adding the CSS property ‘-webkit-overflow-scrolling’: touch in order to get smooth momentum scrolling a strange white flicker started occurring. When scrolling fast, elements of the list would seem to flicker and disappear.&lt;/p&gt;
 
 &lt;p&gt;2). Scroll Events
-The other main issue that I ran into with -webkit-overflow-scrolling: touch is that it does not continuously fire scroll events like the standard CSS scroll properties. It only fires events on scroll start and scroll end. This made it impossible to implement sticky section headers like you see in the iOS Contacts List or other scrolling list view apps like Instagram.&lt;/p&gt;
+The other main issue that I ran into with ‘-webkit-overflow-scrolling: touch’ is that it does not continuously fire scroll events like the standard CSS scroll properties. It only fires events on scroll start and scroll end. This made it impossible to implement sticky section headers like you see in the iOS Contacts List or other scrolling list view apps like Instagram.&lt;/p&gt;
 
 &lt;p&gt;3). scrollTo() Responds Slowly.&lt;/p&gt;
 
-&lt;h2 id="fixing-the-white-flicker"&gt;Fixing the White Flicker&lt;/h2&gt;
-&lt;p&gt;On a scrolling list with -webkit-overflow-scrolling: touch when child elements have position:relative and are offscreen you will experience rendering issues due to a buggy implementation by Apple after iOS 5. If you search google or stack overflow for white screen flicker while scrolling you will see that this a common issue that has been plaguing users. Fortunately iOS 8 seems to have fixed the issue. If your device target is below iOS 8 then you might still need to implement the following fix:&lt;/p&gt;
+&lt;h3 id="fixing-the-white-flicker"&gt;Fixing the White Flicker&lt;/h3&gt;
+&lt;p&gt;On a scrolling list with ‘-webkit-overflow-scrolling: touch’ when child elements have position:relative and are offscreen you will experience rendering issues due to a buggy implementation by Apple after iOS 5. If you search google or stack overflow for white screen flicker while scrolling you will see that this a common issue that has been plaguing users. Fortunately iOS 8 seems to have fixed the issue. If your device target is below iOS 8 then you might still need to implement the following fix:&lt;/p&gt;
 
-&lt;p&gt;-webkit-overflow-scrolling: touch works by inconsistently promoting elements to their own hardware accelerated layers.&lt;/p&gt;
+&lt;p&gt;‘-webkit-overflow-scrolling: touch’ works by inconsistently promoting elements to their own hardware accelerated layers.&lt;/p&gt;
 
 &lt;p&gt;The fix I found is to force all elements inside the scrolling area to be hardware accelerated: this prevents inconsistencies.&lt;/p&gt;
 
@@ -333,13 +333,13 @@ The other main issue that I ran into with -webkit-overflow-scrolling: touch is t
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Applying the property -webkit-transform: translate3d(0,0,0); is a technique to force some devices to use hardware acceleration on the transitions for those elements. &lt;a href="http://www.smashingmagazine.com/2012/06/21/play-with-hardware-accelerated-css"&gt;Smashing Magazine&lt;/a&gt; explains:&lt;/p&gt;
+&lt;p&gt;Applying the property ‘-webkit-transform: translate3d(0,0,0);’ is a technique to force some devices to use hardware acceleration on the transitions for those elements. &lt;a href="http://www.smashingmagazine.com/2012/06/21/play-with-hardware-accelerated-css"&gt;Smashing Magazine&lt;/a&gt; explains:&lt;/p&gt;
 
 &lt;p&gt;Native applications can access the device’s graphical processing unit (GPU) to make pixels fly. Web applications, on the other hand, run in the context of the browser, which lets the software do most (if not all) of the rendering, resulting in less horsepower for transitions. But the Web has been catching up, and most browser vendors now provide graphical hardware acceleration by means of particular CSS rules.&lt;/p&gt;
 
 &lt;p&gt;Using the GPU to render element transitions is memory intensive, so use this as sparingly as possible. We only used this hack because there was no other workaround at the time.&lt;/p&gt;
 
-&lt;h2 id="scroll-events"&gt;Scroll Events&lt;/h2&gt;
+&lt;h3 id="scroll-events"&gt;Scroll Events&lt;/h3&gt;
 
 &lt;p&gt;Before iOS 8, Apple’s mobile browser did not continuously fire scroll events: unlike standard desktop browsers, which do. This makes it impossible to execute code while the users scroll and get responsive components like parallax effects or sticky headers.&lt;/p&gt;
 
@@ -349,9 +349,9 @@ The other main issue that I ran into with -webkit-overflow-scrolling: touch is t
 
 &lt;p&gt;Check out &lt;a href="https://github.com/Telerik-Verified-Plugins/WKWebView"&gt;Telerik’s plugin&lt;/a&gt; and a &lt;a href="http://developer.telerik.com/featured/scroll-event-change-ios-8-big-deal"&gt;blog article explaining the situation with Scroll Events&lt;/a&gt; more in depth.&lt;/p&gt;
 
-&lt;h2 id="scrollto"&gt;scrollTo()&lt;/h2&gt;
+&lt;h3 id="scrollto"&gt;scrollTo()&lt;/h3&gt;
 
-&lt;p&gt;I wanted to build something similar to the alphabetic index controls you see on the right hand side of the iOS Contacts list app. The problem was that when using the -webkit-overflow-scrolling: touch the scrollable container would not scroll instantly in response to jQuery scrollTop() or the window scrollTo() methods.&lt;/p&gt;
+&lt;p&gt;I wanted to build something similar to the alphabetic index controls you see on the right hand side of the iOS Contacts list app. The problem was that when using the ‘-webkit-overflow-scrolling: touch’ the scrollable container would not scroll instantly in response to jQuery scrollTop() or the window scrollTo() methods.&lt;/p&gt;
 
 &lt;p&gt;To get the scroll performance I needed I used Velocity.JS which is an accelerated JavaScript animation library that is much faster than jQuery in many respects. I could call Velocity’s “scroll” method on a given element with duration 0 and the scrollable container specified would instantly jump to the top of the selected element.&lt;/p&gt;
 
