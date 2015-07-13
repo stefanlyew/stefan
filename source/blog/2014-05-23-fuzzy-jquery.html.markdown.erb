@@ -12,7 +12,7 @@ Fuzzy jQuery
 
 I’m working on a web scraper that grabs information from product pages on popular retail sites. Typically, these sites use the same attribute names (like colorChoice or sizeChoice) for every product. This means one jQuery selector can pull all the data I need for every product on the site. Easy enough, right?
 
-So, a few days ago, I wired in to work on this web scraper with my headphones blaring some filthy dubstep. I loaded a JCrew product page, popped open the inspector and started searching. As I dug deeper, I noticed something weird…
+So, a few days ago, I loaded a JCrew product page, popped open the inspector and started searching. As I dug deeper, I noticed something weird…
 
 **All the id attributes on the page had different names.**
 
@@ -24,7 +24,7 @@ I checked other JCrew pages. The attributes were unique for EVERY. SINGLE. PRODU
 
 I wanted the web scraper to extract the colorChoice for each product on the site, but the unique id names would require thousands of different jQuery selectors. How the heck am I supposed to select by id if the attributes keep changing all the time?!
 
-After banging my head against the wall for a few hours, I started researching. And researching. Finally, I learned something cool – **jQuery can do fuzzy matches against partial, inexact and incomplete attributes.** Sanity saved!
+After grappling with the problem for a few hours, I started researching. And researching. Finally, I learned something cool – **jQuery can do fuzzy matches against partial, inexact and incomplete attributes.** Sanity saved!
 
 jQuery can do this with a few built-in regex-style operations. They look like this:
 
