@@ -298,11 +298,11 @@ end
     <link rel="alternate" href="http://blog.url.com/blog/abe-lincoln.html"/>
     <id>http://blog.url.com/blog/abe-lincoln.html</id>
     <published>2013-11-18T00:00:00Z</published>
-    <updated>2015-07-13T09:35:48-05:00</updated>
+    <updated>2015-07-14T09:41:09-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;h1 id="coding-tips-from-abe-lincoln"&gt;Coding Tips From Abe Lincoln&lt;/h1&gt;
+    <content type="html">&lt;h1 id="how-to-fix-common-performance-and-rendering-issues-with-momentum-scrolling-in-hybrid-ios-applications"&gt;How to fix Common Performance and Rendering Issues with Momentum Scrolling In Hybrid iOS Applications&lt;/h1&gt;
 
 &lt;p&gt;I recently built an indexed table list view with HTML/CSS and JavaScript for a hybrid PhoneGap/Cordova application. I wanted my scrolling list to have a user experience close to the iOS Contacts application.&lt;/p&gt;
 
